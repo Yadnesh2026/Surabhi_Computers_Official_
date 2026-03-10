@@ -1367,7 +1367,7 @@ body::before {
 /* FOOTER */
 .site-footer {
   padding: 16px 20px;
-  font-size: 9px;
+  font-size: 5px;
   letter-spacing: 1px;
   gap: 4px;
 }
