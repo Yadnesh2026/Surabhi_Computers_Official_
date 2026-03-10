@@ -1,6 +1,6 @@
 window.addEventListener("load", function () {
 
-  if (window.innerWidth <= 768) return;
+ if (window.innerWidth <= 480) return;
 
   gsap.registerPlugin(ScrollTrigger);
 
