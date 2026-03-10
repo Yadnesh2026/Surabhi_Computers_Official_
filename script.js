@@ -197,12 +197,11 @@ window.addEventListener("load", function () {
   });
 
   // ── STATS REVEAL (all devices) ────────────────────────
-  if (!isMobile) {
     gsap.set(".eyebrow",      { opacity: 0 });
     gsap.set(".stat-item",    { opacity: 0, y: 40 });
     gsap.set(".stat-divider", { opacity: 0, scaleY: 0 });
     gsap.set(".ticker-wrap",  { opacity: 0 });
-  }
+
 
   if (!isMobile) {
   gsap.to(".eyebrow",      { opacity: 1, duration: 1, ease: "power3.out",
