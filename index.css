@@ -1112,7 +1112,7 @@ body::before {
       font-family: 'Share Tech Mono', monospace;
       font-size: 13px;
       letter-spacing: 3px;
-      color: #333;
+      color: #f1eaea;
       text-align: center;
     }
     .contact-footer span { color: #E8B84B; }
@@ -1128,3 +1128,21 @@ body::before {
       .contact-section { padding: 50px 20px; }
       .detail-value { font-size: 16px; }
     }
+
+    .site-footer {
+  text-align: center;
+  padding: 24px 20px;
+  border-top: 1px solid #0e0d0d;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #999393;
+}
+
+.site-footer span {
+  color: #E8B84B;
+}
