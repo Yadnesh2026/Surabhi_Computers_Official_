@@ -365,3 +365,112 @@
       .left-title { font-size: 56px; }
       .course-select { grid-template-columns: repeat(2, 1fr); }
     }
+
+    /* ── MOBILE ── */
+@media (max-width: 600px) {
+
+  /* NAV */
+  nav {
+    padding: 14px 20px;
+  }
+  .nav-back {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  /* MAIN */
+  main {
+    grid-template-columns: 1fr;
+    padding-top: 70px;
+  }
+
+  /* LEFT PANEL */
+  .left-panel {
+    position: relative;
+    top: 0;
+    height: auto;
+    padding: 36px 20px 28px;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .left-title {
+    font-size: 52px;
+    margin-bottom: 16px;
+  }
+
+  .left-desc {
+    font-size: 13px;
+    margin-bottom: 28px;
+    max-width: 100%;
+  }
+
+  .info-value {
+    font-size: 13px;
+  }
+
+  .info-label {
+    font-size: 10px;
+  }
+
+  /* RIGHT PANEL */
+  .right-panel {
+    padding: 28px 20px 60px;
+  }
+
+  .form-header {
+    margin-bottom: 28px;
+  }
+
+  .form-header h2 {
+    font-size: 36px;
+  }
+
+  .form-header p {
+    font-size: 11px;
+  }
+
+  /* FORM */
+  .enquiry-form {
+    gap: 20px;
+  }
+
+  .field-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .field-input {
+    font-size: 16px;
+    padding: 12px 0;
+  }
+
+  textarea.field-input {
+    height: 80px;
+  }
+
+  /* COURSE CHIPS — 2 columns */
+  .course-select {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .course-opt {
+    font-size: 11px;
+    padding: 10px 8px;
+    letter-spacing: 0.5px;
+  }
+
+  /* SUBMIT BTN — full width */
+  .submit-btn {
+    width: 100%;
+    text-align: center;
+    align-self: stretch;
+    font-size: 16px;
+    padding: 16px;
+  }
+
+  .success-msg span {
+    font-size: 11px;
+  }
+}
