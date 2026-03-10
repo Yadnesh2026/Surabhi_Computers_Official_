@@ -204,6 +204,7 @@ window.addEventListener("load", function () {
     gsap.set(".ticker-wrap",  { opacity: 0 });
   }
 
+  if (!isMobile) {
   gsap.to(".eyebrow",      { opacity: 1, duration: 1, ease: "power3.out",
     scrollTrigger: { trigger: "#stats", start: "top 90%" } });
   gsap.to(".stat-item",    { opacity: 1, y: 0, duration: 1, stagger: 0.15, ease: "power3.out",
@@ -212,6 +213,8 @@ window.addEventListener("load", function () {
     scrollTrigger: { trigger: ".stats-row", start: "top 90%" } });
   gsap.to(".ticker-wrap",  { opacity: 1, duration: 1, delay: 0.6,
     scrollTrigger: { trigger: ".stats-row", start: "top 90%" } });
+
+  }
 
   // ── MAGNETIC HOVER (desktop only) ────────────────────
   if (!isMobile) {
