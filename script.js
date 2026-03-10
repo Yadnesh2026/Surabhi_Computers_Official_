@@ -121,9 +121,6 @@
 
 
 
-  
-
-
 // });
 
 window.addEventListener("load", function () {
