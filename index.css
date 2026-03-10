@@ -1148,6 +1148,9 @@ body::before {
 }
 
 @media (max-width: 768px) {
+    html {
+    scroll-behavior: smooth;
+  }
 
   /* NAVBAR */
  .nav {
@@ -1160,7 +1163,20 @@ body::before {
   letter-spacing: 1.5px;
   padding: 8px 16px;
 }
+/* HERO */
+.top {
+  padding: 24px 16px 10px;
+}
 
+/* ADD THIS ↓ */
+.nav,
+.hero-logo,
+.topname-text h1,
+.middle h3,
+.middlebtn {
+  opacity: 1 !important;
+  transform: none !important;
+}
   /* HERO */
   .top {
     padding: 24px 16px 10px;
