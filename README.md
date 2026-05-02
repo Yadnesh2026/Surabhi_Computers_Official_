@@ -16,17 +16,17 @@ Courses Offered: 265+
 
 🚀 Features
 
-✅ Smooth GSAP scroll animations
-✅ Hero section with animated logo & title
-✅ Stats section with number roller animation
-✅ Courses section — clean grid layout
-✅ KLiC marquee logo strip
-✅ Why Choose Us section with institute photos
-✅ Contact section with embedded Google Map
-✅ Enquiry form with Google Sheets integration
-✅ Auto-reply email to users on enquiry submission
-✅ Fully responsive design
-✅ Dot grid background with dark red-black gradient theme
+1. Smooth GSAP scroll animations
+2. Hero section with animated logo & title
+3. Stats section with number roller animation
+4. Courses section — clean grid layout
+5. KLiC marquee logo strip
+6. Why Choose Us section with institute photos
+7. Contact section with embedded Google Map
+8. Enquiry form with Google Sheets integration
+9. Auto-reply email to users on enquiry submission
+10.Fully responsive design
+11.Dot grid background with dark red-black gradient theme
 
 
 🛠️ Tech Stack
