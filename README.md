@@ -32,22 +32,6 @@ Courses Offered: 265+
 🛠️ Tech Stack
 TechnologyUsageHTML5 / CSS3Structure & StylingJavaScript (ES6+)InteractivityGSAP + ScrollTriggerAnimations & Scroll EffectsGoogle Apps ScriptForm BackendGoogle SheetsEnquiry Data StorageGmail (MailApp)Auto-reply Emails
 
-📁 Project Structure
-surabhi-academy-website/
-│
-├── index.html          # Main homepage
-├── index.css           # All styles
-├── script.js           # GSAP animations & scroll logic
-├── enquiry.html        # Enquiry form page
-│
-└── photos/
-    ├── Surabhi.png     # Institute logo
-    ├── class1.jpeg     # Classroom photo 1
-    ├── class2.jpeg     # Classroom photo 2
-    ├── klic-cybersec.png
-    ├── klic-google.png
-    └── klic-diploma.png
-
 📋 Courses Offered
 
 MS-CIT
