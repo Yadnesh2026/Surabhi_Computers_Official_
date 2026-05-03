@@ -29,8 +29,18 @@ Courses Offered: 265+
 11.Dot grid background with dark red-black gradient theme
 
 
-🛠️ Tech Stack
-TechnologyUsageHTML5 / CSS3Structure & StylingJavaScript (ES6+)InteractivityGSAP + ScrollTriggerAnimations & Scroll EffectsGoogle Apps ScriptForm BackendGoogle SheetsEnquiry Data StorageGmail (MailApp)Auto-reply Emails
+## 🛠️ Tech Stack
+
+| Technology           | Usage                               |
+| -------------------- | ----------------------------------- |
+| HTML5                | Structure of the website            |
+| CSS3                 | Styling and layout design           |
+| JavaScript (ES6+)    | Interactivity and dynamic behavior  |
+| GSAP + ScrollTrigger | Animations and scroll-based effects |
+| Google Apps Script   | Backend logic for form handling     |
+| Google Sheets        | Storage of enquiry data             |
+| Gmail (MailApp)      | Automated email responses           |
+
 
 📋 Courses Offered
 
