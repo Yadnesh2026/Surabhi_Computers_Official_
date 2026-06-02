@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <link rel="icon" type="image/png" href="photos/Surabhi.png" />
+  <title>Enquiry</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="enquiry.css" rel="stylesheet">
+</head>
+<body>
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="photos/Surabhi.png" alt="" width="50"></a>
+    <a href="index.html" class="nav-back">Back to Home</a>
+  </nav>
+
+  <main>
+
+    <!-- LEFT -->
+    <div class="left-panel">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <span>get in touch</span>
+      </div>
+      <h1 class="left-title">Start Your<br><span>Journey.</span></h1>
+      <p class="left-desc">Fill in your details and we'll get back to you within 24 hours. Our team will help you pick the right course.</p>
+
+      <div class="contact-info">
+        <div class="info-row">
+          <div class="info-icon">📍</div>
+          <div class="info-text">
+            <span class="info-label">location</span>
+            <span class="info-value">Main Road, Moti Nagar, Amravati</span>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">📞</div>
+          <div class="info-text">
+            <span class="info-label">call us</span>
+            <span class="info-value">+91 94200 77454</span>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">✉️</div>
+          <div class="info-text">
+            <span class="info-label">email</span>
+            <span class="info-value">surabhi.enquiry92@gmail.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right-panel">
+      <div class="form-header">
+        <h2>ENQUIRY FORM</h2>
+        <p>All fields are required</p>
+      </div>
+
+      <form class="enquiry-form" id="enquiryForm">
+
+        <div class="field-group">
+          <label class="field-label">your name</label>
+          <input type="text" class="field-input" id="name" placeholder="Full Name" required/>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">phone number</label>
+          <input type="tel" class="field-input" id="phone" placeholder="+91 00000 00000" required/>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">email address</label>
+          <input type="email" class="field-input" id="email" placeholder="your@email.com" required/>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">course interested in</label>
+          <div class="course-select">
+            <div class="course-opt" data-value="MS-CIT">MS-CIT</div>
+            <div class="course-opt" data-value="Tally Prime">Tally Prime</div>
+            <div class="course-opt" data-value="Web Designing">KLiC Cyber Security</div>
+            <div class="course-opt" data-value="Python">KLiC Advanced Python</div>
+            <div class="course-opt" data-value="Video Editing">Video Edit</div>
+            <div class="course-opt" data-value="Advanced Excel">Excel</div>
+            <div class="course-opt" data-value="AutoCAD">AutoCAD</div>
+            <div class="course-opt" data-value="Graphic Designing">Graphic</div>
+            <div class="course-opt" data-value="HTML & CSS">HTML & CSS</div>
+            <div class="course-opt" data-value="Diploma in IT">Diploma IT</div>
+            <div class="course-opt" data-value="Other">Other</div>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">message</label>
+          <textarea class="field-input" id="message" placeholder="Any questions or additional info..."></textarea>
+        </div>
+
+        <div class="error-msg" id="errorMsg">⚠ Please fill all fields and select a course.</div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">
+          SEND ENQUIRY
+        </button>
+
+        <div class="success-msg" id="successMsg">
+          <span>✓ &nbsp; ENQUIRY SUBMITTED — WE'LL CONTACT YOU SOON!</span>
+        </div>
+
+      </form>
+    </div>
+
+  </main>
+
+  <script>
+    const SHEET_URL = "https://script.google.com/macros/s/AKfycbwAwIIfxAJMQ2LDwDHpO69e99fKdS55hDoHNSOWv3EAczeXGIhkfDiBbvUrzInhE8e4NA/exec";
+
+    // course selection
+    let selectedCourse = "";
+    document.querySelectorAll(".course-opt").forEach(opt => {
+      opt.addEventListener("click", () => {
+        document.querySelectorAll(".course-opt").forEach(o => o.classList.remove("active"));
+        opt.classList.add("active");
+        selectedCourse = opt.dataset.value;
+      });
+    });
+
+    // form submit
+    document.getElementById("enquiryForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const name    = document.getElementById("name").value.trim();
+      const phone   = document.getElementById("phone").value.trim();
+      const email   = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const errorMsg  = document.getElementById("errorMsg");
+      const successMsg = document.getElementById("successMsg");
+      const submitBtn  = document.getElementById("submitBtn");
+
+      // validate
+      if (!name || !phone || !email || !selectedCourse) {
+        errorMsg.classList.add("show");
+        return;
+      }
+      errorMsg.classList.remove("show");
+
+      // loading state
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="spinner"></span> SENDING...';
+
+      try {
+        await fetch(SHEET_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, phone, email, course: selectedCourse, message })
+        });
+
+        // success
+        submitBtn.style.display = "none";
+        successMsg.classList.add("show");
+        this.reset();
+        document.querySelectorAll(".course-opt").forEach(o => o.classList.remove("active"));
+        selectedCourse = "";
+
+      } catch (err) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = "SEND ENQUIRY";
+        errorMsg.textContent = "⚠ Something went wrong. Please try again.";
+        errorMsg.classList.add("show");
+      }
+    });
+  </script>
+
+</body>
+</html>
