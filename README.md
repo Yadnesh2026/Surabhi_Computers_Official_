@@ -1,6 +1,6 @@
 🎓 Surabhi Science Academy & Computers — Official Website
 
-Official website for Surabhi Science Academy & Computers, an MKCL Authorised Learning Centre (ALC) established in 1992, located in Moti Nagar, Amravati, Maharashtra
+Official website for Surabhi Science Academy & Computers, an MKCL Authorised Learning Centre (ALC) established in 1992, located in Moti Nagar, Amravati, Maharashtra.
 
 
 ## 🌟 About the Institute
